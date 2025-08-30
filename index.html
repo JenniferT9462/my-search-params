@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Search Params</title>
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container border border-3 rounded-2 p-4 my-4 bg-light">
+      <h3>Search different engines</h3>
+      <!-- YouTube -->
+      <form
+        action="https://www.youtube.com/results"
+        method="GET"
+        target="_blank"
+      >
+        <div class="form-group mb-3">
+          <label for="search">Search YouTube:</label>
+          <input type="text" name="search_query" id="search" />
+          <button type="submit" class="btn btn-danger">Search</button>
+        </div>
+      </form>
+
+      <!-- Google -->
+      <form action="https://www.google.com/search" method="GET" target="_blank">
+        <div class="form-group mb-3">
+          <label for="gsearch">Search Google:</label>
+          <input type="text" name="q" id="gsearch" />
+          <button type="submit" class="btn btn-success">Search</button>
+        </div>
+      </form>
+
+      <!-- WikiHow -->
+      <form
+        action="https://www.wikihow.com/wikiHowTo"
+        method="GET"
+        target="_blank"
+      >
+        <div class="form-group mb-3">
+          <label for="wikihow">Search WikiHow:</label>
+          <input type="text" name="search" id="wikihow" />
+          <button type="submit" class="btn btn-info">Search</button>
+        </div>
+      </form>
+
+      <!-- DuckDuckGo -->
+      <form action="https://duckduckgo.com/" method="GET" target="_blank">
+        <div class="form-group mb-3">
+          <label for="q">Search DuckDuckGo</label>
+          <input type="text" name="q" id="q" />
+          <button type="submit" class="btn btn-warning">Search</button>
+        </div>
+      </form>
+      <!-- Bing -->
+      <form action="https://www.bing.com/search" method="GET" target="_blank">
+        <div class="form-group mb-3">
+          <label for="q">Search Bing</label>
+          <input type="text" name="q" id="q" />
+          <button type="submit" class="btn btn-primary">Search Bing</button>
+        </div>
+      </form>
+    </div>
+
+    <!-- Pexels Image Edit -->
+    <div class="container border border-3 rounded-2 p-4 my-4 bg-light">
+      <h4 class="mb-4">Pexels Image Editor</h4>
+      <form
+        action="https://images.pexels.com/photos/3184402/pexels-photo-3184402.jpeg"
+        method="GET"
+        target="_blank"
+      >
+        <div class="form-group mb-3">
+          <label for="w">Width:</label>
+          <input type="number" name="w" id="w" value="600" />
+        </div>
+
+        <div class="form-group mb-3">
+          <label for="h">Height:</label>
+          <input type="number" name="h" id="h" value="400" />
+        </div>
+
+        <div class="form-group mb-3">
+          <label for="sepia">Sepia (0–100):</label>
+          <input type="text" name="sepia" id="sepia" value="80" />
+        </div>
+
+        <div class="form-group mb-3">
+          <label for="blur">Blur (0–100):</label>
+          <input type="number" name="blur" id="blur" value="20" />
+        </div>
+
+        <button type="submit" class="btn btn-secondary">View Image</button>
+      </form>
+    </div>
+
+    <!-- Challenges: -->
+    <!-- Openverse -->
+    <div class="container border border-3 rounded-2 p-4 my-4 bg-light">
+      <h4 class="mb-4">Search Openverse</h4>
+      <form action="https://openverse.org/search/" method="GET" target="_blank">
+        <label for="term">Search Openverse:</label>
+        <input type="text" name="q" id="term" />
+        <button type="submit">Search</button>
+      </form>
+    </div>
+
+    <!-- Google Translate -->
+    <div class="container border border-3 rounded-2 p-4 my-4 bg-light">
+      <h4 class="mb-4">Google Translate</h4>
+      <form action="https://translate.google.com/" method="GET" target="_blank">
+        <div class="form-group">
+          <label for="sl">Source Language: </label>
+          <input
+            type="text"
+            name="sl"
+            id="sl"
+            placeholder="auto"
+            value="auto"
+            class="form-control"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="tl">Target Language: </label>
+          <select name="tl" id="tl" class="form-control">
+            <option value="en">English</option>
+            <option value="es">Spanish</option>
+            <option value="fr">French</option>
+            <option value="de">German</option>
+            <option value="zh-CN">Chinese (Simplified)</option>
+            <option value="zh-TW">Chinese (Traditional)</option>
+            <option value="ja">Japanese</option>
+            <option value="ko">Korean</option>
+            <!-- add more languages here -->
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="text">Text: </label>
+          <input type="text" name="text" id="text" class="form-control"/>
+        </div>
+
+        <input type="hidden" name="op" value="translate"/>
+
+        <button type="submit" class="btn btn-primary">Translate</button>
+      </form>
+    </div>
+
+    <!-- AllRecipes -->
+    <div class="container border border-3 rounded-2 p-4 my-4 bg-light">
+      <h4 class="mb-4">Search AllRecipes</h4>
+      <form
+        action="https://www.allrecipes.com/search/"
+        method="GET"
+        target="_blank"
+      >
+        <label for="wt">Ingredients or Dish:</label>
+        <input type="text" name="q" id="wt" class="form-control mb-3" placeholder="e.g., pasta"/>
+
+        <button type="submit" class="btn btn-success">Get Recipe</button>
+      </form>
+    </div>
+  </body>
+</html>
